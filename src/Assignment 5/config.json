@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "Assignment_5"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-Assignment_5-c77c2d85-3b87-402f-9727-7a57d86d6d86;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
