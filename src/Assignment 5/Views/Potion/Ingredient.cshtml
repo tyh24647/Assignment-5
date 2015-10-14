@@ -1,7 +1,9 @@
 ﻿<div id="ingredientName">@ViewBag.ingredientName</div>
+<div id="ingredientIndex">@ViewBag.ingredientIndex</div>
+<div id="ingredientQuery">@ViewBag.ingredientQuery</div>
 
-<form action="/potion/delete" method="post">
-    <input type="submit" value="Delete ingredient" />
+<form action="/potions/get" method="post">
+    <input type="submit" value="Get values" />
     <input type="button" value="Cancel" onclick="window.history.back()" />
     <input type="hidden" value="@ViewBag.ingredientIndex" />
 </form>

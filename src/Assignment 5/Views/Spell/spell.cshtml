@@ -1,0 +1,21 @@
+﻿<div id="spellName">@ViewBag.spellName</div>
+<div id="spellIndex">@ViewBag.spellIndex</div>
+<div id="spellQuery">@ViewBag.spellQuery</div>
+
+<form action="spells/add" method="post">
+    <input type="submit" value="Add spell" />
+    <input type="button" value="Cancel" onclick="window.history.back()" />
+    <input type="hidden" value="@ViewBag.spellName" />
+</form>
+
+<form action="/spells/delete" method="post">
+    <input type="submit" value="Delete spell" />
+    <input type="button" value="Cancel" onclick="window.history.back()" />
+    <input type="hidden" value="@ViewBag.spellIndex" />
+</form>
+
+<form action="/spells/viewspell" method="post">
+    <input type="submit" value="View spell" />
+    <input type="button" value="Cancel" onclick="window.history.back()" />
+    <input type="hidden" value="@ViewBag.spellQuery" />
+</form>

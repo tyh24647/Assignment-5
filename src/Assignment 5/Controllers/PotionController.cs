@@ -7,7 +7,7 @@ using Assignment_5.Models;
 
 
 namespace Assignment_5.Controllers {
-    public class PotionsController : Controller {
+    public class PotionController : Controller {
 
         private static IngredientsModel allIngredients = new IngredientsModel();
     
@@ -15,7 +15,7 @@ namespace Assignment_5.Controllers {
         public IActionResult Index() {
             return View(allIngredients);
         }
-
+        
 
         [HttpPost]
         public IActionResult Mix() {
