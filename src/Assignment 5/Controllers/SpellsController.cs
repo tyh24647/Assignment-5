@@ -7,7 +7,7 @@ using Assignment_5.Models;
 
 
 namespace Assignment_5.Controllers {
-    public class SpellController : Controller {
+    public class SpellsController : Controller {
 
         private static SpellsModel allSpells = new SpellsModel();
 
@@ -18,9 +18,9 @@ namespace Assignment_5.Controllers {
 
         
         public IActionResult ViewSpell(int id) {
-            if (id < 0 || id >= allSpells.ALL.Count) {
+            if (id >= 0 && id < allSpells.ALL.Count) {
                 ViewBag.spellName = allSpells.ALL[id].Name;
-                ViewBag.spellName = id;
+                ViewBag.spellIndex = id;
                 return View();
             }
 
@@ -44,32 +44,6 @@ namespace Assignment_5.Controllers {
         }
 
 
-        /*
-        [HttpPost]
-        public IActionResult Add([FromBody]SpellModel newQuery) {
-            if (newQuery != null) {
-                allSpells.ALL.Add(newQuery);
-            }
-
-            return RedirectToAction("index");
-        }
-        */
-
-
-        /*
-        [HttpPost]
-        public IActionResult AddSpell(string newSpellName) {
-            if (newSpellName != null) {
-                allSpells.ALL.Add(new SpellModel() {
-                    Name = newSpellName
-                });
-            }
-
-            return RedirectToAction("index");
-        }
-        */
-
-
         [HttpPost]
         public IActionResult Delete() {
             if (Request.HasFormContentType) {
@@ -83,9 +57,5 @@ namespace Assignment_5.Controllers {
 
             return RedirectToAction("index");
         }
-
-        
-
-
     }
 }

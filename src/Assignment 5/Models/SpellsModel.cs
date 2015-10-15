@@ -14,7 +14,7 @@ namespace Assignment_5.Models {
 
         public SpellsModel() {
             ALL = new List<SpellModel>() {
-                new SpellModel() { Name = "Expecto Patronus" },
+                new SpellModel() { Name = "Expecto Patronum" },
                 new SpellModel() { Name = "Wingardium Leviosa" },
                 new SpellModel() { Name = "Alohamora" },
                 new SpellModel() { Name = "Expeliarmus" },

@@ -1,0 +1,12 @@
+﻿@model IngredientsModel
+
+<form action="/potions/mix" method="post">
+    @for (var i = 0; i < Model.ALL.Count; i++) {
+        @Model.ALL[i].Name;
+        <input type="checkbox" value="@Model.ALL[i].Name" name="ingredients" />
+        <br />
+    }
+
+    <br />
+    <input type="submit" value="Mix" />
+</form>
