@@ -1,0 +1,24 @@
+﻿@model SpellsModel
+<link rel="stylesheet" type="text/css" href="~/css/SpellStyles.css" />
+
+<form action="/spells/add" method="post">
+    <ol>
+        @for (var i = 0; i < Model.ALL.Count; i++) {
+            var classID = "";
+
+            if (i % 2 != 0) {
+                classID = "colored-text";
+            }
+
+            <li>
+                <div class="@classID">
+                    @Model.ALL[i].Name:
+                    <a href="/spells/viewspell/@i">View</a><br />
+                </div>
+            </li>
+        }
+    </ol>
+
+    <input type="text" name="spellName" />
+    <input type="submit" value="Add Spell" />
+</form>

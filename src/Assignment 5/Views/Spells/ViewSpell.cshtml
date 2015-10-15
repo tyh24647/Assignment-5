@@ -1,0 +1,8 @@
+﻿<link rel="stylesheet" type="text/css" href="~/css/SpellStyles.css" />
+<br /><div id="spellName" class="delete">@ViewBag.spellName</div><br />
+
+<form action="/spells/delete" method="post">
+    <input type="submit" value="Delete spell" />
+    <input type="button" value="Cancel" onclick="window.history.back()" />
+    <input type="hidden" value="@ViewBag.spellIndex" name="spellIndex"/>
+</form>
